@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Google Sheets Clone
+
+A React-based spreadsheet application that mimics core Google Sheets functionality using TypeScript and Tailwind CSS. Link to the live demo: [Google Sheets Clone](https://zeotap-google-sheets-omega.vercel.app/)
+
+## Features
+
+- 📊 Interactive spreadsheet grid with resizable columns and rows
+- 📝 Cell editing with formula support
+- 🔢 Mathematical functions:
+  - SUM (eg. =SUM(A1:A5))
+  - AVERAGE (eg. =AVERAGE(A1:A5))
+  - MAX (eg. =MAX(A1:A5))
+  - MIN (eg. =MIN(A1:A5))
+  - COUNT (eg. =COUNT(A1:A5))
+- ✨ Features similar to Google Sheets:
+  - Formula bar (fx)
+  - Column/row resizing
+  - Cell selection
+  - Formula evaluation
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- Next.js
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/majid-2002/zeotap-google-sheets.git
+
+# Navigate to project directory
+cd zeotap-google-sheets
+
+# Install dependencies
+npm install
+# or
+yarn install
+```
+
+### Running the Application
+
+```bash
+# Start the development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Click on any cell to begin editing
+- Use the formula bar (fx) to enter formulas or edit cell content
+- Drag the blue fill handle to copy content to adjacent cells
+- Resize columns and rows by dragging their borders
+- Use mathematical functions by typing =SUM(), =AVERAGE(), etc.

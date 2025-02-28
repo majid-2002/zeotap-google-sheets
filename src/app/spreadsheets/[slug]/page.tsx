@@ -108,7 +108,6 @@ const SpreadsheetPage = () => {
       });
     }
 
-    // Track which cell is being edited
     currentEditCellRef.current = cellId;
   };
 
@@ -145,7 +144,6 @@ const SpreadsheetPage = () => {
     window.addEventListener("mouseup", handleMouseUp);
   };
 
-  // Update row resize handler
   const handleRowResizeStart = (e: React.MouseEvent, row: number) => {
     e.preventDefault();
     e.stopPropagation();
@@ -179,7 +177,6 @@ const SpreadsheetPage = () => {
     window.addEventListener("mouseup", handleMouseUp);
   };
 
-  // Update click handler to set both row and column and keep focus on cell
   const handleCellClick = (
     column: string,
     row: number,
@@ -195,16 +192,12 @@ const SpreadsheetPage = () => {
     currentEditCellRef.current = null;
   };
 
-  // Update the handleFormulaBarChange function to mark the cell as being edited
   const handleFormulaBarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
 
-    // Update the formula bar state
     setFormulaBarValue(newValue);
 
-    // Update the cell content if a cell is selected
     if (selectedCell) {
-      // Mark the cell as being edited through the formula bar
       currentEditCellRef.current = selectedCell;
 
       setCellData((prev) => ({
